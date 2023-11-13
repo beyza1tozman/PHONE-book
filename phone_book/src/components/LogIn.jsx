@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import Header from "./Header";
 
 function LogIn() {
@@ -36,7 +37,8 @@ function LogIn() {
       return;
     }
 
-    // Authentication calls will be made here...
+    // If both email and password are valid, navigate to the MainPage
+    navigate("/MainPage");
   };
 
   return (
