@@ -12,11 +12,10 @@ function LogIn() {
   const navigate = useNavigate();
 
   const onButtonClick = () => {
-    // Set initial error values to empty
     setEmailError("");
     setPasswordError("");
 
-    // Check if the user has entered both fields correctly
+
     if ("" === email) {
       setEmailError("Please enter your email");
       return;
@@ -37,7 +36,6 @@ function LogIn() {
       return;
     }
 
-    // If both email and password are valid, navigate to the MainPage
     navigate("/MainPage");
   };
 
@@ -56,18 +54,19 @@ function LogIn() {
             onChange={(ev) => setEmail(ev.target.value)}
             className={"inputBox"}
           />
-          <label className="errorLabel">{emailError}</label>
         </div>
+        <label className="errorLabel">{emailError}</label>
         <br />
         <div className={"inputContainer"}>
           <input
             value={password}
+            type="password"
             placeholder="Enter your password here"
             onChange={(ev) => setPassword(ev.target.value)}
             className={"inputBox"}
           />
-          <label className="errorLabel">{passwordError}</label>
         </div>
+        <label className="errorLabel">{passwordError}</label>
         <br />
         <div className={"inputContainer"}>
           <input
