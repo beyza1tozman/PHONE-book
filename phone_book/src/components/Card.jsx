@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useContacts } from "../ContactsContext"; 
+import { useContacts } from "../ContactsContext";
 
 function Card({ id, name, phone }) {
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
@@ -16,6 +16,7 @@ function Card({ id, name, phone }) {
       <div className="top">
         <h2 className="name">{name}</h2>
         <div className="actions">
+          <br/>
           <Link to={`/edit/${id}`} className="editLink">
             Edit
           </Link>

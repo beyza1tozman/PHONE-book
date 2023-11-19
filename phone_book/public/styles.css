@@ -122,14 +122,18 @@ img {
 
 .inputContainer {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.inputContainer label {
+  margin-right: 8px;
 }
 
-.inputContainer > .errorLabel {
+.errorLabel {
   color: 183, 8, 8;
   font-size: 12px;
+  display: flex;
 }
 
 .inputBox {
@@ -140,7 +144,6 @@ img {
   border: 1px solid grey;
   padding-left: 8px;
 }
-/*  App.css */
 
 main {
   padding: 5rem 0;
@@ -169,7 +172,6 @@ input[type="button"] {
   cursor: pointer;
 }
 
-/* for cards */
 .mainPage {
   font-family: sans-serif;
   margin: 0 auto;
@@ -187,7 +189,7 @@ input[type="button"] {
   margin: 20px 0 30px;
   font-family: "McLaren", cursive;
 }
-
+/* for cards */
 .card {
   border-radius: 25px;
   position: relative;
@@ -216,17 +218,45 @@ input[type="button"] {
   display: flex;
   flex: 1;
   margin: 10% 20px 0;
+  font-family: "McLaren", cursive;
 }
 
-.card img {
-  margin: 30px 20px 0 0;
+.editLink {
+  border: none;
+  background: rgb(17, 171, 177);
+  color: white;
+  padding: 8px 8px;
+  margin-left: -60px;
+  margin-top: 120px;
+  font-size: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 30px;
 }
 
-.circle-img {
-  border-radius: 50%;
-  border: 7px solid #fff;
-  width: 120px;
-  height: 120px;
+.editLink:hover {
+  background-color: #2d3436;
+  color: #fff;
+}
+.deleteButton {
+  display: block;
+  border: none;
+  background: rgb(17, 171, 177);
+  color: white;
+  padding: 8px 8px;
+  margin-left: -60px;
+  margin-top: 20px;
+
+  font-size: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 30px;
+  text-decoration: underline;
+}
+
+.deleteButton:hover {
+  background-color: #2d3436;
+  color: #fff;
 }
 
 .bottom {
@@ -236,4 +266,23 @@ input[type="button"] {
 .info {
   margin: 20px 0;
   color: #1a7e76;
+}
+
+.confirmationModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  text-align: center;
+}
+
+.confirmationModal button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  cursor: pointer;
 }
